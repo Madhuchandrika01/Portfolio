@@ -321,12 +321,10 @@ nav .logo {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background: #102A43;
     color: white;
-    font-size: 18px;
-    width: 100%;
-    position: relative;
+    font-size: 16px;
 }
 
 /* Animations */
@@ -341,15 +339,24 @@ footer {
 /* Responsive Fixes */
 @media screen and (max-width: 768px) {
     .hero h2 {
-        font-size: 40px;
+        font-size: 35px;
+    }
+
+    .hero .sub-text {
+        font-size: 18px;
     }
 
     .buttons {
         flex-direction: column;
+        align-items: center;
     }
 
-    .contact-box {
-        width: 100%;
+    .about-box {
+        padding: 15px;
+    }
+
+    .skills span,
+    .certifications span {
+        font-size: 14px;
     }
 }
-
