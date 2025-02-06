@@ -35,68 +35,44 @@ nav .logo {
 
 /* Ensure nav links stay in a row */
 /* Ensure nav links stay in a row */
-/* Navigation Bar Styling */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0B1629;
-    padding: 15px 50px;
-    font-family: 'Courier New', Courier, monospace;
-    max-width: 100%;
-    flex-wrap: wrap; /* Prevents breaking into multiple lines */
-}
-
 .nav-links {
     display: flex;
-    flex-direction: row; /* Force horizontal layout */
-    gap: 20px;
+    flex-wrap: nowrap;  /* Prevents breaking into multiple lines */
+    justify-content: center; /* Centers links */
+    gap: 15px;
     list-style: none;
     padding: 0;
-    justify-content: flex-end; /* Align links to the right */
-    align-items: center;
-    white-space: nowrap; /* Prevents wrapping */
-}
-
-/* Ensure nav links are white */
-.nav-links a {
-    text-decoration: none;
-    font-size: 16px;
-    color: white !important;  /* Ensure white text */
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: yellow;
-}
-
-
-/* Hide the menu toggle icon by default */
-.menu-toggle {
-    display: none;
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 /* Mobile Responsive Fix */
 @media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        color: white;
-    }
-
     .nav-links {
         display: flex;
-        flex-direction: row; /* Ensure it stays horizontal */
-        flex-wrap: wrap;
+        flex-direction: row;  /* Forces links to stay in one line */
         justify-content: center;
+        align-items: center;
         gap: 10px;
+        overflow-x: auto; /* Allows scrolling if needed */
+        white-space: nowrap; /* Prevents wrapping */
     }
+
+    .nav-links a {
+        padding: 10px;
+        white-space: nowrap; /* Ensures text doesn't wrap */
+        font-size: 14px; /* Adjusts font size for smaller screens */
+    }
+}
+
+/* Ensure nav links are white */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: yellow;
 }
 
 
