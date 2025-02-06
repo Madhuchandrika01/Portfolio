@@ -33,11 +33,31 @@ nav .logo {
     letter-spacing: 2px;
 }
 
+/* Ensure nav links stay in a row */
 .nav-links {
     display: flex;
-    gap: 25px;
+    flex-wrap: wrap;  /* Prevents breaking into multiple lines */
+    justify-content: center; /* Centers links */
+    gap: 15px;
     list-style: none;
+    padding: 0;
 }
+
+/* Ensure links don't stack vertically in mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: row;  /* Forces links to stay in one line */
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Allows scrolling if needed */
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        white-space: nowrap; /* Prevents text wrapping */
+    }
+}
+
 
 .nav-links a {
     text-decoration: none;
