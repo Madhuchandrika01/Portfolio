@@ -1,10 +1,16 @@
 /* General Reset */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Navigation Bar Styling */
 /* Navigation Bar Styling */
 nav {
     display: flex;
@@ -13,7 +19,11 @@ nav {
     background-color: #0B1629;
     padding: 15px 50px;
     font-family: 'Courier New', Courier, monospace;
+    max-width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
+
 
 nav .logo {
     font-size: 20px;
@@ -338,25 +348,32 @@ footer {
 
 /* Responsive Fixes */
 @media screen and (max-width: 768px) {
-    .hero h2 {
-        font-size: 35px;
-    }
-
-    .hero .sub-text {
-        font-size: 18px;
-    }
-
-    .buttons {
+    .nav-links {
         flex-direction: column;
         align-items: center;
     }
 
-    .about-box {
-        padding: 15px;
+    .about, .experience, .projects, .contact-section {
+        padding: 50px 5%; /* Reduce padding for smaller screens */
     }
 
-    .skills span,
-    .certifications span {
+    .about-box {
+        max-width: 100%; /* Ensure it fits within the screen */
+        margin: 0 auto;
+    }
+
+    .skills-container, .certifications-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .skills span, .certifications span {
         font-size: 14px;
+        padding: 10px 10px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
