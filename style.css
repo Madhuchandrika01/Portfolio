@@ -42,16 +42,17 @@ nav .logo {
     gap: 15px;
     list-style: none;
     padding: 0;
-    overflow-x: auto; /* Allows scrolling if necessary */
     white-space: nowrap; /* Prevents text from wrapping */
 }
 
 /* Mobile Responsive Fix */
 @media screen and (max-width: 768px) {
     .nav-links {
+        display: flex;
         flex-direction: row;  /* Forces links to stay in one line */
         justify-content: center;
         align-items: center;
+        gap: 10px;
         overflow-x: auto; /* Allows scrolling if needed */
         white-space: nowrap; /* Prevents wrapping */
     }
@@ -63,9 +64,17 @@ nav .logo {
     }
 }
 
+/* Ensure nav links are white */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
 .nav-links a:hover {
     color: yellow;
 }
+
 
 /* Hero Section */
 .hero {
