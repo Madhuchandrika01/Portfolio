@@ -34,36 +34,33 @@ nav .logo {
 }
 
 /* Ensure nav links stay in a row */
+/* Ensure nav links stay in a row */
 .nav-links {
     display: flex;
-    flex-wrap: wrap;  /* Prevents breaking into multiple lines */
+    flex-wrap: nowrap;  /* Prevents breaking into multiple lines */
     justify-content: center; /* Centers links */
     gap: 15px;
     list-style: none;
     padding: 0;
+    overflow-x: auto; /* Allows scrolling if necessary */
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
-/* Ensure links don't stack vertically in mobile */
+/* Mobile Responsive Fix */
 @media screen and (max-width: 768px) {
     .nav-links {
         flex-direction: row;  /* Forces links to stay in one line */
-        flex-wrap: nowrap;
-        overflow-x: auto; /* Allows scrolling if needed */
         justify-content: center;
+        align-items: center;
+        overflow-x: auto; /* Allows scrolling if needed */
+        white-space: nowrap; /* Prevents wrapping */
     }
 
     .nav-links a {
         padding: 10px;
-        white-space: nowrap; /* Prevents text wrapping */
+        white-space: nowrap; /* Ensures text doesn't wrap */
+        font-size: 14px; /* Adjusts font size for smaller screens */
     }
-}
-
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 16px;
-    color: white;
-    transition: color 0.3s;
 }
 
 .nav-links a:hover {
